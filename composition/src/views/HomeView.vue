@@ -1,9 +1,12 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+ import { useFlash } from '@/composables/useFlash';
+  let {flash} = useFlash()
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+   <p>
+    <button @click="flash('it works')">click me</button>
+   </p>
   </main>
 </template>
